@@ -11,6 +11,7 @@
 - Start Laravel Sail: `./vendor/bin/sail up -d`, see details [here](https://laravel.com/docs/10.x/sail#starting-and-stopping-sail)
 - Generate the key for the application: `./vendor/bin/sail artisan key:generate`. [Details](https://laravel.com/docs/10.x/encryption#configuration)
 - Migrate your database: `./vendor/bin/sail artisan migrate`
+- Set up the frontend with 2 consecutive commands: `./vendor/bin/sail npm install` and then `./vendor/bin/sail npm run dev`
 - The application is ready. Available by the `APP_URL` parameter value in the `.env` file ([default](http://localhost/)). Mailpit email testing tool UI: [http://localhost:8025/](http://localhost:8025/)
 
-When the application is already deployed, following command would be enough to run the app: `./vendor/bin/sail up -d`
+When the application is already deployed, following 2 commands would be enough to run the app: `./vendor/bin/sail up -d` and `./vendor/bin/sail npm run dev`
