@@ -17,6 +17,7 @@ return new class extends Migration
             function (Blueprint $table) {
                 $table->id();
                 $table->timestamps();
+                $table->string(Vulnerability::CODE);
                 $table->string(Vulnerability::TITLE);
                 $table->text(Vulnerability::OVERVIEW);
                 $table->longText(Vulnerability::DESCRIPTION);
