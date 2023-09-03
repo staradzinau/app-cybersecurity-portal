@@ -47,6 +47,10 @@ Route::middleware('auth')->group(function () {
                 '/create',
                 [VulnerabilityController::class, 'create']
             )->name('creation.submit');
+            Route::delete(
+                '/delete/{id}',
+                [VulnerabilityController::class, 'delete']
+            )->name('delete');
         }
     );
 });
