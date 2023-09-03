@@ -39,6 +39,14 @@ Route::middleware('auth')->group(function () {
                 '/index',
                 [VulnerabilityController::class, 'index']
             )->name('index');
+            Route::get(
+                '/create',
+                [VulnerabilityController::class, 'getCreationView']
+            )->name('creation.view');
+            Route::post(
+                '/create',
+                [VulnerabilityController::class, 'create']
+            )->name('creation.submit');
         }
     );
 });
