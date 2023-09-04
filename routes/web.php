@@ -51,6 +51,10 @@ Route::middleware('auth')->group(function () {
                 '/delete/{id}',
                 [VulnerabilityController::class, 'delete']
             )->name('delete');
+            Route::get(
+                '/edit/{vulnerability}',
+                [VulnerabilityController::class, 'edit']
+            )->name('edit');
         }
     );
 });
