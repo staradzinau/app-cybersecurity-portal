@@ -55,6 +55,10 @@ Route::middleware('auth')->group(function () {
                 '/edit/{vulnerability}',
                 [VulnerabilityController::class, 'edit']
             )->name('edit');
+            Route::post(
+                '/update',
+                [VulnerabilityController::class, 'update']
+            )->name('update');
         }
     );
 });
